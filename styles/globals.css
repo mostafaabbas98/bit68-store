@@ -1,26 +1,43 @@
-html,
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+/* swiper */
+.swiper-button-prev {
+  left: 15% !important;
+  width: 2rem !important;
+  height: 2rem !important;
+  background: #fff;
+  border-radius: 50%;
+}
+.swiper-button-next {
+  right: 15% !important;
+  width: 2rem !important;
+  height: 2rem !important;
+  background: #fff;
+  border-radius: 50%;
 }
 
-* {
-  box-sizing: border-box;
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  position: absolute !important;
+  color: #000 !important;
+  font-size: 15px !important;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
+.swiper-pagination-bullet {
+  background: gray !important;
+}
+
+@media (max-width: 768px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    opacity: 0 !important;
   }
 }
